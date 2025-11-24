@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomán-Körmöczi Flóra - Senior Sales Manager</title>
-    <!-- Tailwind CSS -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23EFBF04'/><text x='50' y='65' font-family='Arial' font-size='40' font-weight='bold' fill='white' text-anchor='middle'>TKF</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <script>
@@ -21,8 +19,8 @@
             },
             colors: {
               navy: '#44403c',
-              pastel: '#fff0f5',
-              gold: '#fbbf24',
+              pastel: '#f0eadd',
+              gold: '#EFBF04',
               slate: '#57534e',
               white: '#ffffff',
             },
@@ -48,21 +46,19 @@
             50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
             100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
         }
-        /* Custom Timeline Grid */
         .timeline-grid {
             display: grid;
             grid-template-columns: 1fr;
         }
         @media (min-width: 768px) {
             .timeline-grid {
-                grid-template-columns: 200px 60px 1fr; /* Date - Line - Content */
+                grid-template-columns: 200px 60px 1fr;
             }
         }
     </style>
 </head>
 <body class="bg-white text-navy antialiased">
 
-<!-- Navigation (Pastel BG, Dark Text) -->
 <nav class="fixed w-full z-50 bg-pastel/95 backdrop-blur-sm shadow-sm border-b border-gold/20">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="font-heading font-bold text-xl tracking-wider flex items-center gap-2">
@@ -72,20 +68,18 @@
             <a href="#home" class="hover:text-gold transition">Kezdőlap</a>
             <a href="#process" class="hover:text-gold transition">Munkamódszerem</a>
             <a href="#experience" class="hover:text-gold transition">Tapasztalat</a>
+            <a href="#career" class="hover:text-gold transition">Karrier</a>
             <a href="#skills" class="hover:text-gold transition">Kompetenciák</a>
             <a href="#contact" class="px-5 py-2 bg-gold text-white rounded-full hover:bg-navy hover:text-white transition shadow-lg shadow-gold/30">Kapcsolat</a>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section -->
 <section id="home" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
-    <!-- Background Elements -->
     <div class="absolute top-0 right-0 w-1/3 h-full bg-pastel -z-10 skew-x-12 origin-top"></div>
     <div class="absolute bottom-0 left-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl -z-10"></div>
 
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <!-- Text Content -->
         <div class="order-2 md:order-1 animate-fade-in-up">
             <div class="inline-block px-3 py-1 bg-gold/10 text-navy font-bold text-xs tracking-widest uppercase rounded-full mb-4 border border-gold/30">
                 Digital Portfolio
@@ -98,17 +92,14 @@
                 3,5 éve építem a Raiffeisen Bank országos partnerhálózatát, ahol a fókuszom a stratégiai sourcing, a partnerakvizíció és a hűségprogramok fejlesztése. Erősségem a tárgyalás, a kapcsolatépítés és a komplex sales folyamatok teljes körű menedzsmentje.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <!-- Primary Button: Gold -->
                 <a href="#contact" class="px-8 py-4 bg-gold text-white font-bold rounded shadow-xl hover:bg-navy hover:scale-105 transition transform text-center">
                     Kapcsolatfelvétel
                 </a>
-                <!-- Secondary Button: Outline -->
                 <a href="#experience" class="px-8 py-4 border-2 border-navy text-navy font-bold rounded hover:bg-navy hover:text-white transition text-center">
                     Szakmai út
                 </a>
             </div>
 
-            <!-- Quick Tech Stack -->
             <div class="mt-12 flex items-center gap-6 text-slate opacity-80 hover:opacity-100 transition duration-500">
                 <div class="flex flex-col items-center group">
                     <i class="fa-brands fa-hubspot text-3xl mb-1 group-hover:text-[#ff7a59] transition"></i>
@@ -125,15 +116,13 @@
             </div>
         </div>
 
-        <!-- Image Content -->
-        <div class="order-1 md:order-2 flex justify-center relative">
+        <!-- Profilkép pozíció javítva (feljebb húzva: -mt-24) -->
+        <div class="order-1 md:order-2 flex justify-center relative md:-mt-24">
             <div class="relative w-80 h-80 md:w-96 md:h-96">
                 <div class="absolute inset-0 bg-pastel blur-3xl opacity-60 rounded-full"></div>
-                <!-- FONTOS: A profil.jpg-nek a mappában kell lennie -->
                 <img src="profil.jpg" alt="Tomán-Körmöczi Flóra" class="relative w-full h-full object-cover object-top hero-shape shadow-2xl border-4 border-white z-10"
                      onerror="this.src='https://ui-avatars.com/api/?name=Flóra+TK&background=fbbf24&color=fff&size=400';">
 
-                <!-- Floating Badge -->
                 <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-xl z-20 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
                     <div class="bg-gold/10 p-2 rounded-full text-gold">
                         <i class="fa-solid fa-check"></i>
@@ -148,9 +137,7 @@
     </div>
 </section>
 
-<!-- Munkamódszerem Section -->
 <section id="process" class="py-24 bg-pastel text-navy relative">
-    <!-- Decorative line -->
     <div class="absolute top-0 left-0 w-full h-1 bg-gold-gradient"></div>
 
     <div class="max-w-7xl mx-auto px-6">
@@ -163,10 +150,8 @@
             </p>
         </div>
 
-        <!-- 7-Step Grid Layout -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- 1. Előkészítés & kutatás -->
             <div class="bg-white p-6 rounded-2xl border border-gold/20 hover:border-gold transition group hover:shadow-lg">
                 <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center text-white font-bold text-xl mb-4 shadow-md">
                     <i class="fa-solid fa-magnifying-glass-chart"></i>
@@ -180,7 +165,6 @@
                 </ul>
             </div>
 
-            <!-- 2. Személyre szabott kapcsolatteremtés -->
             <div class="bg-white p-6 rounded-2xl border border-gold/20 hover:border-gold transition group hover:shadow-lg">
                 <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center text-white font-bold text-xl mb-4 shadow-md">
                     <i class="fa-solid fa-user-tie"></i>
@@ -195,7 +179,6 @@
                 </ul>
             </div>
 
-            <!-- 3. Tárgyalás & értékteremtés -->
             <div class="bg-white p-6 rounded-2xl border border-gold/20 hover:border-gold transition group hover:shadow-lg">
                 <div class="w-12 h-12 bg-slate rounded-lg flex items-center justify-center text-white font-bold text-xl mb-4 shadow-md">
                     <i class="fa-solid fa-handshake"></i>
@@ -209,7 +192,6 @@
                 </ul>
             </div>
 
-            <!-- 4. Folyamatmenedzsment & CRM -->
             <div class="bg-white p-6 rounded-2xl border border-gold/20 hover:border-gold transition group hover:shadow-lg">
                 <div class="w-12 h-12 bg-gold/80 rounded-lg flex items-center justify-center text-white font-bold text-xl mb-4 shadow-md">
                     <i class="fa-solid fa-diagram-project"></i>
@@ -223,7 +205,6 @@
                 </ul>
             </div>
 
-            <!-- 5. Precíz adminisztráció -->
             <div class="bg-white p-6 rounded-2xl border border-gold/20 hover:border-gold transition group hover:shadow-lg">
                 <div class="w-12 h-12 bg-navy/80 rounded-lg flex items-center justify-center text-white font-bold text-xl mb-4 shadow-md">
                     <i class="fa-solid fa-file-contract"></i>
@@ -237,7 +218,6 @@
                 </ul>
             </div>
 
-            <!-- 6. Folyamatos kommunikáció -->
             <div class="bg-white p-6 rounded-2xl border border-gold/20 hover:border-gold transition group hover:shadow-lg">
                 <div class="w-12 h-12 bg-slate/80 rounded-lg flex items-center justify-center text-white font-bold text-xl mb-4 shadow-md">
                     <i class="fa-solid fa-comments"></i>
@@ -251,7 +231,6 @@
                 </ul>
             </div>
 
-            <!-- 7. Proaktivitás -->
             <div class="bg-white p-6 rounded-2xl border border-gold/20 hover:border-gold transition group hover:shadow-lg md:col-span-2 lg:col-span-3 lg:w-2/3 lg:mx-auto">
                 <div class="flex items-center gap-4 mb-3">
                     <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
@@ -276,14 +255,12 @@
     </div>
 </section>
 
-<!-- Experience Timeline -->
 <section id="experience" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-16 text-center">Szakmai Út</h2>
 
         <div class="space-y-12">
 
-            <!-- Job 1: Nitro -->
             <div class="timeline-grid group">
                 <div class="hidden md:flex justify-end pt-1 pr-8">
                     <div class="text-right">
@@ -335,7 +312,7 @@
                         </div>
 
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-white border border-gold text-gold rounded-full text-xs font-bold">Partnerakvizíció</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate">Partnerakvizíció</span>
                             <span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate">HubSpot CRM</span>
                             <span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate">Projektmenedzsment</span>
                         </div>
@@ -343,7 +320,6 @@
                 </div>
             </div>
 
-            <!-- Job 2: Maximum Business -->
             <div class="timeline-grid group">
                 <div class="hidden md:flex justify-end pt-1 pr-8">
                     <div class="text-right">
@@ -396,7 +372,6 @@
                 </div>
             </div>
 
-            <!-- Job 3: Magyar Telekom (UPDATED) -->
             <div class="timeline-grid group">
                 <div class="hidden md:flex justify-end pt-1 pr-8">
                     <div class="text-right">
@@ -444,16 +419,13 @@
     </div>
 </section>
 
-<!-- Education & Skills Grid (COMPLETELY REDESIGNED) -->
-<section id="skills" class="py-24 bg-white border-t border-pastel">
+<section id="skills" class="py-24  bg-pastel text-navy">
     <div class="max-w-6xl mx-auto px-6">
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-12 text-center">Kompetenciák & Tanulmányok</h2>
 
-        <!-- Row 1: Education & Soft Skills -->
         <div class="grid md:grid-cols-2 gap-8 mb-8">
 
-            <!-- Education Card -->
-            <div class="bg-pastel/50 p-8 rounded-2xl shadow-sm border border-pastel h-full hover:shadow-md transition">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-pastel h-full hover:shadow-md transition">
                 <h3 class="font-heading text-xl font-bold text-navy mb-6 flex items-center gap-3">
                     <i class="fa-solid fa-graduation-cap text-gold"></i> Tanulmányok
                 </h3>
@@ -472,7 +444,6 @@
                     </div>
                 </div>
 
-                <!-- Languages inside Education Card -->
                 <div class="mt-8 pt-6 border-t border-gold/10">
                     <h4 class="text-sm font-bold text-navy uppercase tracking-widest mb-4">Nyelvek</h4>
                     <div class="space-y-3">
@@ -498,7 +469,6 @@
                 </div>
             </div>
 
-            <!-- 3) Soft Skills Card -->
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gold/20 h-full hover:shadow-md transition">
                 <h3 class="font-heading text-xl font-bold text-navy mb-6 flex items-center gap-3">
                     <i class="fa-solid fa-heart text-gold"></i> Soft Skills & Személyiség
@@ -536,7 +506,6 @@
             </div>
         </div>
 
-        <!-- Row 2: 1) Core Competencies (Full Width Grid) -->
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-8">
             <h3 class="font-heading text-xl font-bold text-navy mb-6 flex items-center gap-3">
                 <i class="fa-solid fa-star text-gold"></i> Szakmai Kompetenciák
@@ -569,41 +538,215 @@
             </div>
         </div>
 
-        <!-- Row 3: 2) Tools & Software (Tag Cloud style) -->
-        <div class="bg-pastel/30 p-8 rounded-2xl border border-gold/10">
+        <div class="bg-white p-8 rounded-2xl border border-gold/10">
             <h3 class="font-heading text-xl font-bold text-navy mb-6 flex items-center gap-3">
                 <i class="fa-solid fa-laptop-code text-gold"></i> Eszközök & Szoftverek
             </h3>
-            <div class="flex flex-wrap gap-3">
-                <!-- CRM -->
-                <span class="px-4 py-2 bg-white border border-gold text-navy font-bold rounded-lg text-sm shadow-sm">HubSpot</span>
 
-                <!-- Project Mgmt -->
-                <span class="px-4 py-2 bg-white border border-slate-200 text-slate font-semibold rounded-lg text-sm">ClickUp</span>
-                <span class="px-4 py-2 bg-white border border-slate-200 text-slate font-semibold rounded-lg text-sm">Trello</span>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
-                <!-- Office -->
-                <span class="px-4 py-2 bg-white border border-slate-200 text-slate font-semibold rounded-lg text-sm">Excel / Google Sheets (Pivot)</span>
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold/30 transition group flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-pastel flex items-center justify-center text-gold text-xl group-hover:scale-110 transition">
+                        <i class="fa-brands fa-hubspot"></i>
+                    </div>
+                    <span class="font-bold text-slate text-sm">HubSpot</span>
+                </div>
 
-                <!-- Communication -->
-                <span class="px-4 py-2 bg-white border border-slate-200 text-slate font-semibold rounded-lg text-sm">Outlook / Gmail</span>
-                <span class="px-4 py-2 bg-white border border-slate-200 text-slate font-semibold rounded-lg text-sm">Teams / Zoom</span>
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold/30 transition group flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-pastel flex items-center justify-center text-gold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-check-to-slot"></i>
+                    </div>
+                    <span class="font-bold text-slate text-sm">ClickUp</span>
+                </div>
 
-                <!-- Creative -->
-                <span class="px-4 py-2 bg-white border border-slate-200 text-slate font-semibold rounded-lg text-sm">Canva</span>
-                <span class="px-4 py-2 bg-white border border-slate-200 text-slate font-semibold rounded-lg text-sm">PowerPoint</span>
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold/30 transition group flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-pastel flex items-center justify-center text-gold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <span class="font-bold text-slate text-sm">Sales Autopilot</span>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold/30 transition group flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-pastel flex items-center justify-center text-gold text-xl group-hover:scale-110 transition">
+                        <i class="fa-brands fa-trello"></i>
+                    </div>
+                    <span class="font-bold text-slate text-sm">Trello</span>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold/30 transition group flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-pastel flex items-center justify-center text-gold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <span class="font-bold text-slate text-sm">Excel / Sheets</span>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold/30 transition group flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-pastel flex items-center justify-center text-gold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="font-bold text-slate text-sm">Outlook / Gmail</span>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold/30 transition group flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-pastel flex items-center justify-center text-gold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <span class="font-bold text-slate text-sm">Teams / Zoom</span>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold/30 transition group flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-pastel flex items-center justify-center text-gold text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-file-powerpoint"></i>
+                    </div>
+                    <span class="font-bold text-slate text-sm">PowerPoint</span>
+                </div>
+
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- Elaborated Footer (Pastel BG) -->
-<footer id="contact" class="bg-pastel text-navy pt-20 pb-10 border-t border-gold/20">
+<section id="career" class="py-24 bg-white border-t border-pastel">
+    <div class="absolute top-0 left-0 w-full h-1 bg-gold-gradient"></div>
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="text-center mb-16">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4 text-navy">Nyitott pozíciók & szakmai irányok</h2>
+            <p class="text-slate max-w-3xl mx-auto leading-relaxed text-lg">
+                Milyen pozíciók passzolnak hozzám szakmailag?
+            </p>
+            <p class="text-slate max-w-3xl mx-auto mt-4">
+                A jelenlegi és korábbi munkatapasztalataim nem kizárólag a sales területre épülnek: a mindennapi feladataim nagy része olyan kompetenciákat fejlesztett, amelyek Account Manager és Project Manager pozíciókban is kiemelten fontosak és azonnal használhatók.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-20">
+            <div class="bg-pastel p-8 rounded-2xl border border-gold/20 shadow-sm hover:shadow-lg transition">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-gold rounded-full flex items-center justify-center text-white text-2xl">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-navy">Account Manager</h3>
+                </div>
+                <p class="text-slate mb-6">
+                    Erős ügyfélkapcsolati fókusz, folyamatos kommunikáció és hosszú távú partnerkezelés — ez a szerepkör teljes mértékben összhangban van a Nitroban és a Maximum Businessnél végzett feladataimmal.
+                </p>
+                <div>
+                    <h4 class="font-bold text-navy text-sm uppercase tracking-wide mb-3">Miért illik hozzám?</h4>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Erős kapcsolatteremtési készség</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Üzleti gondolkodás</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Precíz és megbízható kommunikáció</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Ügyfélmegtartás és gondozás</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Szervezett, partnerközpontú működés</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-pastel p-8 rounded-2xl border border-gold/20 shadow-sm hover:shadow-lg transition">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 bg-navy rounded-full flex items-center justify-center text-white text-2xl">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-navy">Project Manager</h3>
+                </div>
+                <p class="text-slate mb-6">
+                    A munkám jelentős része projektkoordináció: kampányok előkészítése, csapatok közötti kommunikáció, határidők és folyamatok menedzselése. Ez a PM szerepkör egyik legfontosabb építőköve.
+                </p>
+                <div>
+                    <h4 class="font-bold text-navy text-sm uppercase tracking-wide mb-3">Miért illik hozzám?</h4>
+                    <ul class="space-y-2 text-sm text-slate">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Strukturált gondolkodás</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Hatékony priorizálás</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Rendszerszintű rálátás</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> Csapatmunka és koordináció</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold"></i> End-to-end folyamatmenedzsment tapasztalat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-16">
+            <h3 class="font-heading text-3xl md:text-4xl font-bold text-center text-navy mb-12">Mit várok egy új munkahelytől?</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- Expectation 1 -->
+                <div class="flex items-start gap-4 bg-pastel p-6 rounded-xl border-l-4 border-gold shadow-sm">
+                    <div class="flex-shrink-0 mt-1 text-gold text-xl">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-navy text-lg mb-2">Szakmai bizalom és önállóság</h4>
+                        <p class="text-slate text-sm leading-relaxed">
+                            Senior szintű tapasztalattal rendelkezem, így a mikromenedzsment helyett a célalapú vezetésben és a kölcsönös bizalomban hiszek. Szeretem, ha a felelősség mellé döntési jogkör is társul.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 bg-pastel p-6 rounded-xl border-l-4 border-gold shadow-sm">
+                    <div class="flex-shrink-0 mt-1 text-gold text-xl">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-navy text-lg mb-2">Minőségorientált szemlélet</h4>
+                        <p class="text-slate text-sm leading-relaxed">
+                            Olyan céget keresek, ahol a "minőség" nem csak szlogen, hanem a mindennapi működés része – mind a termékben, mind az ügyfélkezelésben. Csak olyan szolgáltatást tudok hitelesen képviselni, amiben magam is hiszek.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 bg-pastel p-6 rounded-xl border-l-4 border-gold shadow-sm">
+                    <div class="flex-shrink-0 mt-1 text-gold text-xl">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-navy text-lg mb-2">Transzparens kommunikáció</h4>
+                        <p class="text-slate text-sm leading-relaxed">
+                            Egyenes, nyílt kommunikációs kultúrát keresek, ahol a visszajelzés (feedback) a fejlődés eszköze, és ahol a csapat tagjai partnerként tekintenek egymásra.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 bg-pastel p-6 rounded-xl border-l-4 border-gold shadow-sm">
+                    <div class="flex-shrink-0 mt-1 text-gold text-xl">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-navy text-lg mb-2">Modern eszközrendszer</h4>
+                        <p class="text-slate text-sm leading-relaxed">
+                            A hatékony munkavégzéshez elengedhetetlennek tartom a modern CRM (pl. HubSpot) és projektmenedzsment eszközök használatát, valamint a folyamatok digitális támogatását.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-navy text-white p-8 rounded-2xl text-center shadow-lg relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gold-gradient"></div>
+            <h3 class="font-heading text-2xl font-bold mb-4">Összefoglalva</h3>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-6">
+                Olyan pozíciót keresek, ahol a sales szemlélet, a projektmenedzsment kompetenciák és az ügyfélkapcsolati fókusz együtt teremt értéket.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 font-bold text-lg">
+                <span class="text-gold">Sales Manager</span>
+                <span class="text-gray-500">•</span>
+                <span class="text-gold">Account Manager</span>
+                <span class="text-gray-500">•</span>
+                <span class="text-gold">Project Manager</span>
+            </div>
+            <p class="text-sm text-gray-400 mt-4">
+                – ezek azok a pozíciók, amelyekhez a tapasztalatom és a személyiségem a leginkább illeszkedik.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact" class="bg-pastel text-navy pt-20 pb-10 border-t border-gold/80">
     <div class="max-w-6xl mx-auto px-6">
 
         <div class="grid md:grid-cols-3 gap-12 mb-16">
-            <!-- Column 1: Brand & Mission -->
             <div>
                 <div class="font-heading font-bold text-2xl tracking-wider mb-2 flex items-center gap-2">
                     <span class="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-white font-bold">TKF</span>
@@ -618,24 +761,22 @@
                     Célom értéket teremteni: valódi üzleti eredményt, hosszú távú partnerségeket és minőségi ügyfélélményt építek minden projektben.
                 </p>
                 <div class="flex gap-4">
-                    <!-- Social Icons (Updated Facebook) -->
                     <a href="https://www.linkedin.com/in/fl%C3%B3ra-tom%C3%A1n-k%C3%B6rm%C3%B6czi-960012237/" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gold hover:text-white transition shadow-sm"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.facebook.com/flora.kormoczi" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gold hover:text-white transition shadow-sm"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
             </div>
 
-            <!-- Column 2: Quick Links -->
             <div>
                 <h3 class="font-heading font-bold text-xl mb-6 text-gold">Navigáció</h3>
                 <ul class="space-y-4 text-slate">
                     <li><a href="#home" class="hover:text-gold hover:translate-x-1 transition inline-block">Kezdőlap</a></li>
                     <li><a href="#process" class="hover:text-gold hover:translate-x-1 transition inline-block">Munkamódszerem</a></li>
                     <li><a href="#experience" class="hover:text-gold hover:translate-x-1 transition inline-block">Szakmai Tapasztalat</a></li>
+                    <li><a href="#career" class="hover:text-gold hover:translate-x-1 transition inline-block">Karrier</a></li>
                     <li><a href="#skills" class="hover:text-gold hover:translate-x-1 transition inline-block">Kompetenciák</a></li>
                 </ul>
             </div>
 
-            <!-- Column 3: Contact -->
             <div>
                 <h3 class="font-heading font-bold text-xl mb-6 text-gold">Kapcsolat</h3>
                 <ul class="space-y-6">
@@ -670,7 +811,6 @@
             </div>
         </div>
 
-        <!-- Bottom Bar -->
         <div class="pt-8 border-t border-gold/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate">
             <div>
                 &copy; 2025 Tomán-Körmöczi Flóra. Minden jog fenntartva.
