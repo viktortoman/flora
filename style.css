@@ -1,0 +1,116 @@
+.gradient-text {
+    background: linear-gradient(to right, #fbbf24, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-shape {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .timeline-grid {
+        grid-template-columns: 200px 60px 1fr;
+    }
+}
+
+/* Toggle Switch Stílus */
+.mode-btn {
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.mode-btn:hover {
+    opacity: 1;
+}
+
+.mode-btn.active {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #EFBF04;
+    color: white;
+    box-shadow: 0 4px 15px rgba(239, 191, 4, 0.4);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* PROFESSZIONÁLIS MOBIL MENÜ */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Teljes képernyő */
+    background-color: #44403c; /* Navy szín */
+    z-index: 999; /* Legfelül legyen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Animáció kezdőállapota (elrejtve fentre) */
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s ease;
+    pointer-events: none; /* Ne lehessen kattintani ha nincs ott */
+}
+
+/* Amikor aktív (becsúszik) */
+#mobile-menu.visible-menu {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Linkek stílusa a menüben */
+.mobile-nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem; /* Nagy betűk */
+    font-weight: 700;
+    color: #ffffff;
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+    color: #EFBF04; /* Gold */
+}
+
+/* Dekorációs vonal a link alatt */
+.mobile-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #EFBF04;
+    transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover::after {
+    width: 100%;
+}
