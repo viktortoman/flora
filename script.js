@@ -285,4 +285,6 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
   });
+
+  document.getElementsByClassName('current-year')[0].innerHTML = new Date().getFullYear().toString();
 });
